@@ -1,0 +1,45 @@
+#task_element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+    list-style: "none";
+    font-size: 48px;
+}
+#task_element_buttons{
+    display: flex;
+    align-items: center;
+    margin-left: 124px;
+}
+#delete_icon{
+    padding: 16px;
+}
+#check_icon{
+    padding: 16px;
+}
+#new_task{
+    border-radius: 8px;
+    height: 24px;
+    width: 360px;
+    border-color: #5084C1;
+    border-style: dashed;
+}
+#add_task{
+    display: flex;
+    align-items: center;
+    height: 34px;
+    width: 96px;
+    border-radius: 8px;
+    margin-left: 24px;
+    background-color: #c7d0db;
+}
+#input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#title{
+    display: flex;
+    justify-content: center;
+    margin: 48px;
+}

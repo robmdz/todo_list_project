@@ -1,21 +1,28 @@
 function add_tasks(info){
     const task_list = document.getElementById("tasks_list")
+
     const task_element = task_list.appendChild(document.createElement("li"))
-    const task_info = task_element.appendChild(document.createTextNode(info))
-    const delete_button = task_element.appendChild(document.createElement("button"))
-    delete_button.style.backgroundColor = "red"
-    delete_button.style.padding = "8px"
-    const check_button = task_element.appendChild(document.createElement("button"))
-    check_button.style.backgroundColor = "blue"
-    check_button.style.padding = "8px"
+    task_element.id = "task_element"
+    task_element.appendChild(document.createTextNode(info))
+    task_element_buttons = task_element.appendChild(document.createElement("div"))
+    task_element_buttons.id = "task_element_buttons"
+
+    const delete_icon = task_element_buttons.appendChild(document.createElement("img"))
+    delete_icon.src = "/icons and imgs/delete_button_img.svg"
+    delete_icon.id = "delete_icon"
+
+    const check_icon = task_element_buttons.appendChild(document.createElement("img"))
+    check_icon.src = "/icons and imgs/check_button.svg"
+    check_icon.id = "check_icon"
+
     let isClicked = false
-    check_button.addEventListener("click", (e)=> {
+    check_icon.addEventListener("click", ()=> {
         isClicked = !isClicked
         check_task(task_element, isClicked)
         })
 
-    delete_button.addEventListener("click", (e)=> {
-        delete_task(e.target.parentElement)}) 
+    delete_icon.addEventListener("click", (e)=> {
+        delete_task(e.target.parentElement.parentElement)}) 
 }
 
 const input_information = document.getElementById("new_task")
