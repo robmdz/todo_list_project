@@ -1,4 +1,4 @@
-function add_tasks(info){
+function add_tasks(info, tag){
     const task_list = document.getElementById("tasks_list")
 
     const task_element = task_list.appendChild(document.createElement("li"))
@@ -15,6 +15,10 @@ function add_tasks(info){
     task_text.appendChild(document.createTextNode(info))
     task_text.id = "task_text"
 
+    const importance_tag = task_container.appendChild(document.createElement("span"))
+    importance_tag.appendChild(document.createTextNode(tag))
+    
+
     const delete_icon = task_container.appendChild(document.createElement("img"))
     delete_icon.src = "/icons and imgs/delete_button_img.svg"
     delete_icon.id = "delete_icon"
@@ -22,7 +26,7 @@ function add_tasks(info){
     let isClicked = false
     check_icon.addEventListener("click", ()=> {
         isClicked = !isClicked
-        check_task(task_element, isClicked)
+        check_task(task_text, isClicked)
         })
 
     delete_icon.addEventListener("click", (e)=> {
@@ -30,14 +34,19 @@ function add_tasks(info){
 }
 
 const input_information = document.getElementById("new_task")
-const btn = document.getElementById("add_task")
+const btn_send = document.getElementById("img_send")
+const task_tag = document.getElementById("task_importance")
 
-btn.addEventListener("click", ()=>{
+btn_send.addEventListener("click", send_task)
+btn_send.addEventListener("enter", send_task)
+
+function send_task(){
     if (input_information.value != ""){
-        add_tasks(input_information.value)
+        add_tasks(input_information.value, task_tag.value)
     }
     input_information.value = ""
-})
+}
+
 
 
 function delete_task(task){

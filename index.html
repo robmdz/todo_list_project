@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Toto Do</title>
+    <title>5 tasks</title>
 </head>
 <body>
     <nav>
-        <H1 id="title">Toto Do</H1>
+        <H1 id="title">5 tasks</H1>
     </nav>
     <div id="task_list_area">
         <ul id="tasks_list"></ul>
     </div>
-     <div id="input">
-     <input type="text" id="new_task">
-    <button id="add_task">
-    <img src="/icons and imgs/send_icon.svg" alt="">
-    Add task</button>  
+    <div id="input">
+        <select name="importance" id="task_importance">
+            <option value="Default">Default</option>
+            <option value="Urgent">Urgent</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+        <input type="text" id="new_task">
+        <img src="/icons and imgs/send_icon.svg" alt="" id="img_send"> 
     </div>
     <script src="code.js"></script>
 </body>
