@@ -17,6 +17,7 @@ function add_tasks(info, tag){
 
     const importance_tag = task_container.appendChild(document.createElement("span"))
     importance_tag.appendChild(document.createTextNode(tag))
+    importance_tag.id = "importance_tag"
     
 
     const delete_icon = task_container.appendChild(document.createElement("img"))
@@ -38,7 +39,11 @@ const btn_send = document.getElementById("img_send")
 const task_tag = document.getElementById("task_importance")
 
 btn_send.addEventListener("click", send_task)
-btn_send.addEventListener("enter", send_task)
+input_information.addEventListener("keydown", (e) => {
+    if (e.key === "Enter"){
+        send_task();
+    }
+    })
 
 function send_task(){
     if (input_information.value != ""){

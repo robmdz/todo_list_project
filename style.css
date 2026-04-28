@@ -13,12 +13,14 @@ body{
 #tasks_list{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 10px;
     padding: 0px;
-    background-color: beige;
+    background-color: #b8eef7;
     height: 480px;
     width: 960px;
     flex-direction: column;
+    border-radius: 12px;
 }
 #task_element{
     display: flex;
@@ -42,22 +44,42 @@ body{
     padding: 10px;
     min-width: 480px;
     max-width: 480px;
+    margin-left: 12px;
+}
+#importance_tag{
+    background-color: #5084C1;
+    text-align: center;
+    border-radius: 12px;
+    padding-right: 12px;
+    padding-left: 12px;
+    min-width: 168px;
+    max-width: 168px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 12px;
+}
+#task_importance{
+    height: 28px;
+    width: 84px; 
+    text-decoration: solid;
 }
 #new_task{
     border-radius: 8px;
     height: 24px;
     width: 360px;
     border-color: #5084C1;
-    border-style: dashed;
+    font-family: "Jua", sans-serif;
 }
 #img_send{
-    height: 34px;
-    width: 48px;
+    height: 64px;
+    width: 84px;
 }
 #task_importance{
     margin-right: 12px;
     border-radius: 8px;
     background-color: #5084C1;
+    font-family: "Jua", sans-serif;
 }
 #input{
     display: flex;
