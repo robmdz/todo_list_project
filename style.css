@@ -12,15 +12,15 @@ body{
 }
 #tasks_list{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin: 10px;
-    padding: 0px;
     background-color: #b8eef7;
     height: 480px;
     width: 960px;
     flex-direction: column;
     border-radius: 12px;
+    overflow-y: auto;
 }
 #task_element{
     display: flex;
