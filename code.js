@@ -31,7 +31,7 @@ function add_tasks(info, tag){
         })
 
     delete_icon.addEventListener("click", (e)=> {
-        delete_task(e.target.parentElement)}) 
+        delete_task(e.target.parentElement.parentElement)})
 }
 
 const input_information = document.getElementById("new_task")
